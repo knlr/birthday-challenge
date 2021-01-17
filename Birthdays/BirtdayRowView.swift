@@ -11,36 +11,37 @@ import SwiftUI
 struct BirtdayRowView: View {
 
     var person: Person
-    var initials: String { person.name.components(separatedBy: " ").map{ $0.prefix(1).capitalized }.joined()
-    }
+
 
     var body: some View {
-        HStack(alignment: .top) {
-            ZStack {
-                Circle().fill(Color.gray)
+        NavigationLink( destination: BirthdayDetailView(person: person)) {
+                HStack(alignment: .top) {
+                    ZStack {
+                        Circle().fill(Color.gray)
 
-                Text(initials)
-                    .font(.largeTitle)
+                        Text(person.initials)
+                            .font(.largeTitle)
 
-            }.padding()
+                    }.padding()
 
-            VStack(alignment: .leading) {
-                Text(person.name)
-                    .fontWeight(.bold)
-                    .padding(.top)
+                    VStack(alignment: .leading) {
+                        Text(person.name)
+                            .fontWeight(.bold)
+                            .padding(.top)
 
-                Text(person.date_of_birth)
-                    .padding(.top, 0.0)
+                        Text(person.date_of_birth)
+                            .padding(.top, 0.0)
+                    }
+                    .padding()
+                }
+                .padding()
             }
-            .padding()
         }
-        .padding()
-    }
 }
 
 struct BirtdayRowView_Previews: PreviewProvider {
     static var previews: some View {
-        BirtdayRowView(person: Person(id: "id", name: "Peter", date_of_birth: "01-01-1970"))
+        BirtdayRowView(person: Person(id: "id", name: "Peter", date_of_birth: "1970-01-01"))
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/414.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
     }
 }

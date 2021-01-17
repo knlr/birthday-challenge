@@ -18,10 +18,13 @@ struct ContentView: View {
             ProgressView()
         }
         else {
-            List {
-                ForEach(persons) { person in
-                    BirtdayRowView(person: person)
+            NavigationView {
+                List {
+                    ForEach(persons) { person in
+                        BirtdayRowView(person: person)
+                    }
                 }
+                .navigationTitle("Birthdays")
             }
         }
     }
