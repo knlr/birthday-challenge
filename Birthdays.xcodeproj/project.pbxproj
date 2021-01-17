@@ -15,6 +15,7 @@
 		729DD91B25B328C6001D9BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729DD91925B328C6001D9BCD /* LaunchScreen.storyboard */; };
 		729DD92525B48311001D9BCD /* BirthdayRESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD92425B48311001D9BCD /* BirthdayRESTClient.swift */; };
 		729DD92B25B48E5E001D9BCD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD92A25B48E5E001D9BCD /* Person.swift */; };
+		72CF2AAC25B4A21200B2F884 /* BirtdayRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CF2AAB25B4A21200B2F884 /* BirtdayRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		729DD91C25B328C6001D9BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729DD92425B48311001D9BCD /* BirthdayRESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRESTClient.swift; sourceTree = "<group>"; };
 		729DD92A25B48E5E001D9BCD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		72CF2AAB25B4A21200B2F884 /* BirtdayRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirtdayRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				729DD90E25B328C4001D9BCD /* AppDelegate.swift */,
 				729DD91025B328C4001D9BCD /* SceneDelegate.swift */,
 				729DD91225B328C4001D9BCD /* ContentView.swift */,
+				72CF2AAB25B4A21200B2F884 /* BirtdayRowView.swift */,
 				729DD91425B328C6001D9BCD /* Assets.xcassets */,
 				729DD91925B328C6001D9BCD /* LaunchScreen.storyboard */,
 				729DD91C25B328C6001D9BCD /* Info.plist */,
@@ -165,6 +168,7 @@
 				729DD91125B328C4001D9BCD /* SceneDelegate.swift in Sources */,
 				729DD91325B328C4001D9BCD /* ContentView.swift in Sources */,
 				729DD92525B48311001D9BCD /* BirthdayRESTClient.swift in Sources */,
+				72CF2AAC25B4A21200B2F884 /* BirtdayRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
