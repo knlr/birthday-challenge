@@ -1,6 +1,0 @@
-module GraphQL_Swift {
-  umbrella header "GraphQL-Swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

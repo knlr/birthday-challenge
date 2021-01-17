@@ -7,53 +7,63 @@
 //
 
 import Foundation
-import GraphQL_Swift
 
 
 final class BirthdayRESTClient {
 
-    static private let controller = GQLNetworkController(apiDefinition: BirthdayGQLAPIDefinition())
+    enum Error: Swift.Error {
+        case noData
+        case connectivity
+    }
+
 
 
     static func getPeopleList(completion: @escaping (Result<[Person], Error>) -> Void) {
 
-        struct BirthdayGQLQuery : GQLQuery {
-            var graphQLLiteral: String {
-                return """
-                query {
-                    person {
-                        name
-                        date_of_birth
-                        }
+
+        var request = URLRequest(url: URL(string: "https://birthday-api.hasura.app/v1/graphql")!)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let queryDict = ["query": """
+            query {
+                person {
+                    name
+                    date_of_birth
                     }
-                """
             }
-            var variables: [String : Any]?
-            var fragments: [GQLFragment]?
-        }
-        do {
-            try controller.makeGraphQLRequest(BirthdayGQLQuery(), returnQueue: .main) { results in
+            """]
+        request.httpBody = try! JSONSerialization.data(withJSONObject: queryDict, options: [])
+        URLSession.shared.dataTask(with: request) { (data, response, _) in
 
-                switch results {
+            var result: Result<[Person], Error> = .failure(.noData)
 
-                case .fail(let error):()
-                case .success(let dictionary): ()
+            struct Response: Decodable {
+                let data: PersonData?
+                struct PersonData: Decodable {
+                    let person: [Person]?
                 }
-//                JSONDecoder().decode([Person].self, from: results)
             }
-        }
-        catch {
+            if response == nil {
 
-        }
+                result = .failure(.connectivity)
+            }
+            if let data = data {
+
+                do {
+                    let response = try JSONDecoder().decode(Response.self, from: data)
+                    if let persons = response.data?.person, !persons.isEmpty {
+                        result = .success(persons)
+                    }
+                }
+                catch {
+                    result = .failure(.noData)
+                }
+            }
+            DispatchQueue.main.async {
+                completion(result)
+            }
+
+        }.resume()
     }
 }
 
-
-private extension BirthdayRESTClient {
-
-    struct BirthdayGQLAPIDefinition : GQLAPIDefinition {
-        var authorization: GQLAuthorization?
-        var rootRESTURLString: String { return "https://birthday-api.hasura.app/v1/graphql" }
-        var rootWebsocketURLString: String { return "" }
-    }
-}

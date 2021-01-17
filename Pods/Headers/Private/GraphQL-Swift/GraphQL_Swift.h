@@ -1,1 +1,0 @@
-../../../GraphQL-Swift/GraphQL-Swift/GraphQL_Swift.h
