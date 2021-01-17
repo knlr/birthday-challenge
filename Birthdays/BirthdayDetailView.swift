@@ -14,23 +14,42 @@ struct BirthdayDetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0.0) {
             ZStack {
                 Circle()
                     .fill(Color.gray)
-                    .padding(.horizontal, 100)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.horizontal, 120)
 
                 Text(person.initials)
-                    .font(.largeTitle)
+                    .font(.system(size: 64))
             }
+            .padding(.top, 39)
+            .padding(.bottom, 27)
+
             Text(person.name.components(separatedBy: " ").first ?? "")
+                .font(.system(size: 36))
+                .padding(.bottom, 15)
             Text("\(person.age) years old".uppercased())
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss() 
-            } ) {
-                Text("GO BACK")
+                .font(.system(size: 13))
+                .padding(.bottom, 32)
+
+            HStack {
+                Spacer(minLength: 16)
+                Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    } ) {
+                        Text("GO BACK")
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 52.0)
+                .background(Color.black)
+                Spacer(minLength: 16)
             }
 
+
+            Spacer()
         }.navigationBarBackButtonHidden(true)
     }
 }

@@ -15,28 +15,33 @@ struct BirtdayRowView: View {
 
     var body: some View {
         NavigationLink( destination: BirthdayDetailView(person: person)) {
-                HStack(alignment: .top) {
-                    ZStack {
-                        Circle().fill(Color.gray)
+            HStack(alignment: .top) {
+                ZStack {
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width: 70, height: 70.0)
+                        .padding()
 
-                        Text(person.initials)
-                            .font(.largeTitle)
+                    Text(person.initials)
+                        
 
-                    }.padding()
+                }
 
-                    VStack(alignment: .leading) {
-                        Text(person.name)
-                            .fontWeight(.bold)
-                            .padding(.top)
+                VStack(alignment: .leading) {
+                    Text(person.name)
+                        .fontWeight(.bold)
 
-                        Text(person.date_of_birth)
-                            .padding(.top, 0.0)
-                    }
-                    .padding()
+                    Text(person.date_of_birth)
+                    Spacer()
+
                 }
                 .padding()
+
+                Spacer()
             }
+            .padding(.leading)
         }
+    }
 }
 
 struct BirtdayRowView_Previews: PreviewProvider {
