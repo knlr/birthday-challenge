@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7222677D25B4B33E00226A3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222677C25B4B33E00226A3E /* ContentView.swift */; };
 		729DD90F25B328C4001D9BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD90E25B328C4001D9BCD /* AppDelegate.swift */; };
 		729DD91125B328C4001D9BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD91025B328C4001D9BCD /* SceneDelegate.swift */; };
-		729DD91325B328C4001D9BCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD91225B328C4001D9BCD /* ContentView.swift */; };
 		729DD91525B328C6001D9BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729DD91425B328C6001D9BCD /* Assets.xcassets */; };
 		729DD91825B328C6001D9BCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729DD91725B328C6001D9BCD /* Preview Assets.xcassets */; };
 		729DD91B25B328C6001D9BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729DD91925B328C6001D9BCD /* LaunchScreen.storyboard */; };
 		729DD92525B48311001D9BCD /* BirthdayRESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD92425B48311001D9BCD /* BirthdayRESTClient.swift */; };
 		729DD92B25B48E5E001D9BCD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DD92A25B48E5E001D9BCD /* Person.swift */; };
 		72CF2AAC25B4A21200B2F884 /* BirtdayRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CF2AAB25B4A21200B2F884 /* BirtdayRowView.swift */; };
+		72CF2AAF25B4A87E00B2F884 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 72CF2AAE25B4A87E00B2F884 /* SampleResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7222677C25B4B33E00226A3E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		729DD90B25B328C4001D9BCD /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729DD90E25B328C4001D9BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		729DD91025B328C4001D9BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		729DD91225B328C4001D9BCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		729DD91425B328C6001D9BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729DD91725B328C6001D9BCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		729DD91A25B328C6001D9BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		729DD92425B48311001D9BCD /* BirthdayRESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRESTClient.swift; sourceTree = "<group>"; };
 		729DD92A25B48E5E001D9BCD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		72CF2AAB25B4A21200B2F884 /* BirtdayRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirtdayRowView.swift; sourceTree = "<group>"; };
+		72CF2AAE25B4A87E00B2F884 /* SampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 			children = (
 				729DD90D25B328C4001D9BCD /* Birthdays */,
 				729DD90C25B328C4001D9BCD /* Products */,
-				C2C13F51C4C9968317303179 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,8 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				729DD90E25B328C4001D9BCD /* AppDelegate.swift */,
+				7222677C25B4B33E00226A3E /* ContentView.swift */,
 				729DD91025B328C4001D9BCD /* SceneDelegate.swift */,
-				729DD91225B328C4001D9BCD /* ContentView.swift */,
 				72CF2AAB25B4A21200B2F884 /* BirtdayRowView.swift */,
 				729DD91425B328C6001D9BCD /* Assets.xcassets */,
 				729DD91925B328C6001D9BCD /* LaunchScreen.storyboard */,
@@ -80,16 +81,10 @@
 		729DD91625B328C6001D9BCD /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				72CF2AAE25B4A87E00B2F884 /* SampleResponse.json */,
 				729DD91725B328C6001D9BCD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C2C13F51C4C9968317303179 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CF2AAF25B4A87E00B2F884 /* SampleResponse.json in Resources */,
 				729DD91B25B328C6001D9BCD /* LaunchScreen.storyboard in Resources */,
 				729DD91825B328C6001D9BCD /* Preview Assets.xcassets in Resources */,
 				729DD91525B328C6001D9BCD /* Assets.xcassets in Resources */,
@@ -165,8 +161,8 @@
 			files = (
 				729DD92B25B48E5E001D9BCD /* Person.swift in Sources */,
 				729DD90F25B328C4001D9BCD /* AppDelegate.swift in Sources */,
+				7222677D25B4B33E00226A3E /* ContentView.swift in Sources */,
 				729DD91125B328C4001D9BCD /* SceneDelegate.swift in Sources */,
-				729DD91325B328C4001D9BCD /* ContentView.swift in Sources */,
 				729DD92525B48311001D9BCD /* BirthdayRESTClient.swift in Sources */,
 				72CF2AAC25B4A21200B2F884 /* BirtdayRowView.swift in Sources */,
 			);
@@ -236,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -290,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -305,7 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Birthdays/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Birthdays/Preview\\ Content/SampleResponse.json Birthdays/Preview\\ Content";
 				DEVELOPMENT_TEAM = GDYH754BNE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Birthdays/Info.plist;
@@ -325,7 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Birthdays/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Birthdays/Preview\\ Content/SampleResponse.json Birthdays/Preview\\ Content";
 				DEVELOPMENT_TEAM = GDYH754BNE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Birthdays/Info.plist;

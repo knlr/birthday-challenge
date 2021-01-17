@@ -9,13 +9,31 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    var showLoadingState: Bool
+    var persons: [Person]
     var body: some View {
-        Text("Hello aa")
+
+        if showLoadingState {
+            ProgressView()
+        }
+        else {
+            List {
+                ForEach(persons) { person in
+                    BirtdayRowView(person: person)
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+
+        let fileURL = Bundle.main.url(forResource: "SampleResponse", withExtension: "json")!
+        let data = try! Data(contentsOf: fileURL)
+        let persons = try! JSONDecoder().decode([Person].self, from: data)
+
+        ContentView(showLoadingState: false, persons: persons)
     }
 }

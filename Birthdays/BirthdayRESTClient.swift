@@ -17,9 +17,7 @@ final class BirthdayRESTClient {
     }
 
 
-
     static func getPeopleList(completion: @escaping (Result<[Person], Error>) -> Void) {
-
 
         var request = URLRequest(url: URL(string: "https://birthday-api.hasura.app/v1/graphql")!)
         request.httpMethod = "POST"
@@ -27,6 +25,7 @@ final class BirthdayRESTClient {
         let queryDict = ["query": """
             query {
                 person {
+                    id
                     name
                     date_of_birth
                     }

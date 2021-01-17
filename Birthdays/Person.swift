@@ -9,8 +9,9 @@
 import Foundation
 
 
-struct Person : Decodable {
+struct Person : Decodable, Identifiable {
 
+    let id: String
     let name: String
     let date_of_birth: String
 }

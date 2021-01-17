@@ -34,12 +34,13 @@ struct BirtdayRowView: View {
             }
             .padding()
         }
+        .padding()
     }
 }
 
 struct BirtdayRowView_Previews: PreviewProvider {
     static var previews: some View {
-        BirtdayRowView(person: Person(name: "Peter", date_of_birth: "01-01-1970"))
+        BirtdayRowView(person: Person(id: "id", name: "Peter", date_of_birth: "01-01-1970"))
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/414.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
     }
 }
