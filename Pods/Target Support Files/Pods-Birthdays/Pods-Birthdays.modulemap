@@ -1,0 +1,6 @@
+module Pods_Birthdays {
+  umbrella header "Pods-Birthdays-umbrella.h"
+
+  export *
+  module * { export * }
+}
